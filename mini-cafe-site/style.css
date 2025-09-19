@@ -1,0 +1,57 @@
+/* style.css - mini-cafe-site */
+
+/* General page style */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f5ef; /* soft cream background */
+    color: #333; /* dark gray text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Georgia', serif;
+    color: #6b4226; /* rich coffee brown */
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Paragraphs */
+p {
+    font-size: 16px;
+    color: #444;
+    margin: 10px 20px;
+    text-align: center;
+}
+
+/* Menu box container */
+.menu-box {
+    background-color: #fffdf8; 
+    border: 2px solid #d6a77a; /* warm golden border */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px auto;
+    width: 65%;
+    max-width: 600px;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.08);
+}
+
+/* Menu list */
+.menu-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-box li {
+    font-size: 18px;
+    padding: 12px 0;
+    border-bottom: 1px dashed #d6a77a;
+    text-align: center;
+}
+
+.menu-box li:last-child {
+    border-bottom: none;
+}
