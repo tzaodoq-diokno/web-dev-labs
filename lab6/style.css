@@ -1,0 +1,20 @@
+.styled-box {
+  border: 2px solid #444;
+  padding: 15px;
+  margin: 20px 0;
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.styled-btn {
+  background-color: teal;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.styled-btn:hover {
+  background-color: darkcyan;
+}
