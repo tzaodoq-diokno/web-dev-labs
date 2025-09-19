@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Page | Sip and Run Café</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    nav {
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1em;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+    #about { background-color: #f4f4f4; }
+    #menu { background-color: #e0f7fa; }
+    #contact { background-color: #ffe0b2; }
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Sip and Run Café was created for runners and coffee lovers alike. 
+       We serve handcrafted brews, fresh pastries, and even stock running essentials 
+       like shoes, watches, and sunglasses.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <ul>
+      <li>Espresso</li>
+      <li>Banana Energy Muffin</li>
+      <li>Iced Latte</li>
+      <li>Chocolate Croissant</li>
+      <li>Cold Brew</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: sipandrun@example.com</p>
+    <p>Phone: +63 908 706 7138</p>
+    <p>Location: Quezon City, Philippines</p>
+  </section>
+</body>
+</html>
