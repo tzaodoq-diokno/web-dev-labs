@@ -14,46 +14,7 @@
   <div class="container mt-5">
     <h1 class="text-center mb-4">Sip and Run Café: Menu</h1>
 
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <div class="card-body text-center">
-            <h5 class="card-title">Dirty Spanish Latte</h5>
-            <p class="card-text">
-              A creamy espresso drink with a blend of sweet cinnamon and strong coffee flavor.
-            </p>
-            <p><strong>₱160</strong></p>
-            <button class="btn btn-primary order-btn" data-item="Dirty Spanish Latte">Order Now</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <div class="card-body text-center">
-            <h5 class="card-title">Deconstructed Burrito</h5>
-            <p class="card-text">
-              All your burrito favorites—rice, beans, veggies, and meat—served in a bowl for easy enjoyment.
-            </p>
-            <p><strong>₱220</strong></p>
-            <button class="btn btn-primary order-btn" data-item="Deconstructed Burrito">Order Now</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <div class="card-body text-center">
-            <h5 class="card-title">Protein-Rich Coffee Smoothie</h5>
-            <p class="card-text">
-              A healthy blend of espresso, milk, and protein powder to fuel your body and mind.
-            </p>
-            <p><strong>₱180</strong></p>
-            <button class="btn btn-primary order-btn" data-item="Protein-Rich Coffee Smoothie">Order Now</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="menu-list" class="row g-4"></div>
 
     <div class="mt-5">
       <h3>Order Summary</h3>
@@ -61,22 +22,6 @@
     </div>
   </div>
 
-  <script>
-    const buttons = document.querySelectorAll('.order-btn');
-    const orderList = document.getElementById('orderList');
-
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.getAttribute('data-item');
-        alert(`You ordered ${item}!`);
-
-        const listItem = document.createElement('li');
-        listItem.className = 'list-group-item';
-        listItem.textContent = item;
-        orderList.appendChild(listItem);
-      });
-    });
-  </script>
-
+  <script src="menu.js"></script>
 </body>
 </html>

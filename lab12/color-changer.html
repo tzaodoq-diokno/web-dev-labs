@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Changer</title>
+</head>
+<body>
+  <h2>Change Page Background Color</h2>
+
+  <select id="colorSelect">
+    <option value="">-- Choose a color --</option>
+    <option value="lightblue">Light Blue</option>
+    <option value="lightgreen">Light Green</option>
+    <option value="lightcoral">Light Coral</option>
+  </select>
+
+  <button onclick="changeBackground()">Change Background</button>
+
+  <script>
+    function changeBackground() {
+      const selectedColor = document.getElementById("colorSelect").value;
+
+      if (selectedColor) {
+        document.body.style.backgroundColor = selectedColor;
+      } else {
+        alert("Please select a color first!");
+      }
+    }
+  </script>
+</body>
+</html>

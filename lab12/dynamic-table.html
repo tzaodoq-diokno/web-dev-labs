@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        display: none;
+      }
+
+      td {
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+      }
+
+      td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Dynamic Product Table</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price (₱)</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+    </tbody>
+  </table>
+
+  <script>
+    const products = [
+      { name: "Espresso Shot", quantity: 2, price: 100 },
+      { name: "Deconstructed Burrito", quantity: 1, price: 220 },
+      { name: "Protein Coffee Smoothie", quantity: 3, price: 180 }
+    ];
+
+    const tableBody = document.getElementById("table-body");
+
+    for (let i = 0; i < products.length; i++) {
+      const row = document.createElement("tr");
+
+      const nameCell = document.createElement("td");
+      const qtyCell = document.createElement("td");
+      const priceCell = document.createElement("td");
+
+      nameCell.innerText = products[i].name;
+      qtyCell.innerText = products[i].quantity;
+      priceCell.innerText = "₱" + products[i].price;
+
+      nameCell.setAttribute("data-label", "Name");
+      qtyCell.setAttribute("data-label", "Quantity");
+      priceCell.setAttribute("data-label", "Price (₱)");
+
+      row.appendChild(nameCell);
+      row.appendChild(qtyCell);
+      row.appendChild(priceCell);
+
+      tableBody.appendChild(row);
+    }
+  </script>
+</body>
+</html>
