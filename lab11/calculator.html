@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>calculator</title></head>
+<body class="p-3">
+  <input id="n1" type="number" placeholder="First number">
+  <input id="n2" type="number" placeholder="Second number">
+  <button id="add">Add</button>
+  <p id="result"></p>
+
+  <script>
+    document.getElementById('add').addEventListener('click', function() {
+      const a = Number(document.getElementById('n1').value) || 0;
+      const b = Number(document.getElementById('n2').value) || 0;
+      document.getElementById('result').innerText = 'Sum: ' + (a + b);
+    });
+  </script>
+</body>
+</html>
